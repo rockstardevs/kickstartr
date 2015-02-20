@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+  <head>
+    <% styles.forEach( function ( file ) { %><link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    <% scripts.forEach( function ( file ) { %><script type="text/javascript" src="<%= file %>"></script><% }); %>
+  </head>
+  <body>
+    <h1><%= name%> v<%= version %></h1>
+  </body>
+</html>
