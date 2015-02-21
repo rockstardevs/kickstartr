@@ -2,14 +2,12 @@
  * This file/module contains all configuration for the build process.
  */
 module.exports = {
-  project_name: 'kickstartr',
-
   stage_dir: '.stage',
   build_dir: '.build',
   compile_dir: 'dist',
   http_port: '8080',
   static_root: 'static/',
-  
+
   app_files: {
     js: [
       'src/client/app.js',
