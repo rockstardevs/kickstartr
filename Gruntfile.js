@@ -33,7 +33,7 @@ module.exports = function(grunt) {
             {
               json: {
                 'version': '<%= pkg.version %>',
-                'project_name': '<%= project_name %>'
+                'project_name': '<%= pkg.name %>'
               }
             }
           ],
@@ -50,19 +50,19 @@ module.exports = function(grunt) {
       },
       staging_server: {
         root: "<%= stage_dir%>/src/server",
-        output: "../../../<%= build_dir %>/<%= project_name%>",
+        output: "../../../<%= build_dir %>/<%= pkg.name%>",
         run_files: ["server.go"]
       },
       server: {
         root: "<%= stage_dir%>/src/server",
-        output: "../../../<%= compile_dir %>/<%= project_name%>",
+        output: "../../../<%= compile_dir %>/<%= pkg.name%>",
         run_files: ["server.go"]
       }
     },
 
     shell: {
       runserver: {
-        command: '<%= build_dir%>/<%= project_name%> --httpport=<%= http_port%> --alsologtoconsole --templateroot=<%= build_dir%>/templates --staticroot=<%= build_dir%>/<%= static_root%>'
+        command: '<%= build_dir%>/<%= pkg.name%> --httpport=<%= http_port%> --alsologtoconsole --templateroot=<%= build_dir%>/templates --staticroot=<%= build_dir%>/<%= static_root%>'
       }
     },
 
@@ -165,7 +165,7 @@ module.exports = function(grunt) {
           'src/**/*.go'
         ],
         tasks: [
-          'go:build:<%= project_name%>_staging'
+          'go:build:<%= pkg.name%>_staging'
         ]
       }
     }
@@ -207,7 +207,7 @@ module.exports = function(grunt) {
             scripts: jsFiles,
             styles: cssFiles,
             version: grunt.config('pkg.version'),
-            name: grunt.config('project_name')
+            name: grunt.config('pkg.name')
           }
         });
       }
