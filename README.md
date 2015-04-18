@@ -1,4 +1,4 @@
-# Kickstartr v0.1
+# Kickstartr v0.1 [![Build Status](https://travis-ci.org/rockstardevs/kickstartr.svg)](https://travis-ci.org/rockstardevs/kickstartr)
 
 Kickstartr is a boilerplate webapp with a golang backend server, angularjs client app and grunt based build system. It is directly copied and tweaked from [ngbp](https://github.com/ngbp/ngbp).
 
