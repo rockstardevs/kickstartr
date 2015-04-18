@@ -8,5 +8,8 @@ before_script:
   - npm install --quiet -g grunt-cli karma bower
   - npm install
   - bower install
+  - export GOROOT=.
+  - alias go="go1.2"
+  - go get
 
 script: grunt dist
