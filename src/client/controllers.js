@@ -1,7 +1,7 @@
 myapp.controllers = {};
 
 myapp.controllers.MainController = function($scope) {
-  $scope.message = 'The quick start project template.'
+  $scope.message = 'The quick start project template.';
 };
 
 // Register controllers.

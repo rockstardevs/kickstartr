@@ -5,12 +5,8 @@ before_script:
   - npm install
   - bower install
 install:
-  - export GOPATH=${HOME}/gopath
   - go get github.com/gorilla/mux
   - go get github.com/jcelliott/lumber
-  - echo $GOPATH
-  - echo $GOROOT
-  - ls -laR $GOPATH
 script: grunt dist
 notifications:
   email: false

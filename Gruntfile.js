@@ -38,8 +38,7 @@ module.exports = function(grunt) {
     /** Compiles the backend server binary. */
     go: {
       options: {
-        // TODO(singhsays): Make this generic or move it to build config options.
-        'GOPATH': ['../..']
+        'GOPATH': [process.env.GOPATH]
       },
       staging_server: {
         root: "<%= stage_dir%>/src/server",
