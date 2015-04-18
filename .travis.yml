@@ -1,4 +1,8 @@
-language: node_js
+language: go
+
+go:
+  - tip
+  
 node_js:
   - "0.10"
 
