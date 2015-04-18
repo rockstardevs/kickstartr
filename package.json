@@ -4,6 +4,7 @@
   "description": "Kickstartr Project Template",
   "author": "Sumit Arora <singhsays@gmail.com>",
   "license": "MIT",
+  "repository": "rockstardevs/kickstartr"
   "devDependencies": {
     "bower": "^1.4.1",
     "grunt": "^0.4.5",

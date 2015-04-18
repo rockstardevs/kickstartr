@@ -31,6 +31,10 @@ var (
 )
 
 func IndexHandler(rw http.ResponseWriter, req *http.Request) {
+	if req.RequestURI != "/" {
+		http.NotFound(rw, req)
+		return
+	}
 	http.ServeFile(rw, req, *templateRoot+"/index.html")
 }
 
