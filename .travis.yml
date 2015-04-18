@@ -16,3 +16,7 @@ install:
   - go get github.com/gorilla/mux
   - go get github.com/jcelliott/lumber
 script: grunt dist
+after_script:
+  - ls -laR /home/travis
+  - echo $GOPATH
+  - echo $GOROOT
