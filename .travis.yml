@@ -8,7 +8,7 @@ before_script:
   - npm install --quiet -g grunt-cli karma bower
   - npm install
   - bower install
-  - export GOPATH=.
-  - go get ./...
-
+install:
+  - go get github.com/gorilla/mux
+  - go get github.com/jcelliott/lumber
 script: grunt dist
