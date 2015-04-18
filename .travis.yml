@@ -1,16 +1,15 @@
 language: go
 go:
-  - tip
+  - 1.2.1
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - npm install --quiet -g grunt-cli karma bower
   - npm install
   - bower install
-script: go get github.com/gorilla/mux && go get github.com/jcelliott/lumber && grunt dist
-notifications:
-  email: false
-after_script:
+install:
+  - go get github.com/gorilla/mux
+  - go get github.com/jcelliott/lumber
   - echo $GOPATH
   - echo $GOROOT
   - ls -laR $GOPATH
+script: grunt dist
+notifications:
+  email: false
