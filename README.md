@@ -4,10 +4,16 @@ Kickstartr is a boilerplate webapp with a golang backend server, angularjs clien
 
 ### To Use
 * Clone this repo
-* edit package.json and update name
+* edit package.json and update name|version
+* edit bower.json and update name|version
 * setup dependencies
 ```sh
 $ npm install
 $ bower install
 ```
-* update README
+* replace contents of README.md with your project's details.
+
+### Still TODO
+* Integrate testing
+* Integrate releases with [bake](https://github.com/singhsaysdotcom/bake)
+* Add a boilerplate logo maybe.
